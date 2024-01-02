@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
+import { SessionProvider } from '../contexts/ctx';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -46,11 +47,16 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
+    <SessionProvider>
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(app)" options={{ headerShown: false }} />
+        <Stack.Screen name="welcome" options={{ headerShown: false }} />
+        <Stack.Screen name="login" options={{ title: 'Iniciar sesión' }} />
+        <Stack.Screen name="register" options={{ title: 'Registrate' }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
       </Stack>
     </ThemeProvider>
+    </SessionProvider>
   );
 }
