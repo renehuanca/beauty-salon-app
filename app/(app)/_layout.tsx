@@ -21,8 +21,8 @@ export default function AppLayout() {
 
   // This layout can be deferred because it's not the root layout.
   return (
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-      </Stack>
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+    </Stack>
   )
 }

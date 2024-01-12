@@ -2,13 +2,12 @@ import { useEffect } from 'react';
 import { Text, View } from 'react-native';
 
 import { useSession } from '../../contexts/ctx';
-import { useStorageState } from '../../state/useStorageState';
 
 export default function Index() {
   const { signOut, session } = useSession();
 
   useEffect(() => {
-   console.log(session) 
+    console.log(session)
   }, [])
 
   return (
