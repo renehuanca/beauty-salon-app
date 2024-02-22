@@ -28,6 +28,9 @@ const styles = StyleSheet.create({
   },
   colorPrimary: {
     color: Colors.primary
+  },
+  colorWhite: {
+    color: 'white'
   }
 })
 
@@ -38,6 +41,7 @@ export function Text({ style, fontWeight, color, ...props }: TextProps) {
     fontWeight === 'bold' && styles.textBold,
     fontWeight === 'black' && styles.textBlack,
     color === 'primary' && styles.colorPrimary,
+    color === 'white' && styles.colorWhite,
     style,
   ]
 

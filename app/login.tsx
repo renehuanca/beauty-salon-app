@@ -21,7 +21,7 @@ export default function Login() {
     try {
       setLoading(true)
 
-      const response = await globalThis.fetch('http://192.168.1.10:3000/api/v1/login', {
+      const response = await globalThis.fetch('http://192.168.1.10:8000/api/v1/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values)
