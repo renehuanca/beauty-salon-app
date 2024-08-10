@@ -30,7 +30,7 @@ export default function Register() {
     try {
       setLoading(true)
 
-      const response = await globalThis.fetch('http://192.168.1.10:3000/api/v1/register', {
+      const response = await globalThis.fetch('http://localhost:8000/api/v1/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values)
